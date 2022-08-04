@@ -28,6 +28,9 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
 
+// Accessing the airport GeoJSON URL
+let airportData = "https://raw.githubusercontent.com/carlos-uroza/Mapping_Earthquakes/main/majorAirports.json";
+
 // //  Add a marker to the map for Los Angeles, California.
 // let marker = L.marker([34.0522, -118.2437]).addTo(map);
 
@@ -94,7 +97,7 @@ let sanFranAirport =
             "coordinates":[-122.375,37.61899948120117]}}
 ]};
 
-// // Grabbing our GeoJSON data.
+// // Grabbing our GeoJSON data using pointToLayer.
 // L.geoJSON(sanFranAirport, {
 //   // We turn each feature into a marker on the map.
 //   pointToLayer: function(feature, latlng) {
@@ -105,12 +108,19 @@ let sanFranAirport =
 
 // }).addTo(map);
 
-// Grabbing our GeoJSON data.
-L.geoJSON(sanFranAirport, {
-  // We turn each feature into a marker on the map.
-  onEachFeature: function(feature, layer) {
-    console.log(layer);
-    layer.bindPopup();
-  }
+// // Grabbing our GeoJSON data using onEachFeature.
+// L.geoJSON(sanFranAirport, {
+//   // We turn each feature into a marker on the map.
+//   onEachFeature: function(feature, layer) {
+//     console.log(layer);
+//     layer.bindPopup();
+//   }
 
-}).addTo(map);
+// }).addTo(map);
+
+// Grabbing our GeoJSON data.
+d3.json(airportData).then(function(data) {
+  console.log(data);
+// Creating a GeoJSON layer with the retrieved data.
+L.geoJSON(data).addTo(map);
+});
