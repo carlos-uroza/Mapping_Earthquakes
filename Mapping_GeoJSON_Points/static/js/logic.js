@@ -2,7 +2,7 @@
 console.log("working");
 
 // Create the map object with center at the San Francisco airport.
-let map = L.map('mapid').setView([37.5, -122.5], 10);
+let map = L.map('mapid').setView([30, 30], 2);
 
 // Leaflet Documentation Method of adding Tile Layers to our maps
 // // We create the tile layer that will be the background of our map.
