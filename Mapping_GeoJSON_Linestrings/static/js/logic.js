@@ -55,7 +55,7 @@ L.control.layers(baseMaps).addTo(map);
 // let airportData = "https://raw.githubusercontent.com/carlos-uroza/Mapping_Earthquakes/main/majorAirports.json";
 
 // Accessing the Toronto airline routes GeoJSON URL.
-let torontoData = "https://raw.githubusercontent.com/<GitHub_name>/Mapping_Earthquakes/main/torontoRoutes.json";
+let torontoData = "https://raw.githubusercontent.com/carlos-uroza/Mapping_Earthquakes/main/torontoRoutes.json";
 
 // //  Add a marker to the map for Los Angeles, California.
 // let marker = L.marker([34.0522, -118.2437]).addTo(map);
