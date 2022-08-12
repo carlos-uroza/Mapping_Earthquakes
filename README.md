@@ -2,7 +2,7 @@
 
 ## Overview of the Project
 
-# Purpose
+### Purpose
 The purpose of this project is to build an interactive visualization of earthquake data from the USGS. Our program takes live GeoJSON data from the USGS of both the weekly earthquake summary and the major (4.5+) earthquake feeds. The data is presented in a MapBox format with interactive overlay options for the datasets and the tectonic plate boundaries.
 
 ## Results
